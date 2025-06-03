@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth() + 1; // Months are zero-based
+        var year = date.getFullYear();
+        document.write("Today's date is: " + day + "/" + month + "/" + year + "<br>");
+
+        // Displaying the current time
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+
+        document.write("Current time is: " + hours + ":" + minutes + ":" + seconds);
+        document.write("<br>Current time in 12-hour format: " + ((hours % 12) || 12) + ":" + minutes + ":" + seconds + (hours < 12 ? " AM" : " PM"));
+        document.write("<br>Current time in UTC: " + date.toUTCString());  
+        document.write("<br>Current time in ISO format: " + date.toISOString());
+        document.write("<br>Current time in locale format: " + date.toLocaleString());
+        var day = new Date()
+        document.write("<br>Current day of the week: " + day.toLocaleString('default', { weekday: 'long' }));
+        document.write("<br>Current month: " + day.toLocaleString('default', { month: 'long' }));
+        switch (day.getDay()) {
+            case 0:
+                document.write("<br>Today is Sunday");
+                break;
+            case 1:
+                document.write("<br>Today is Monday");
+                break;
+            case 2:
+                document.write("<br>Today is Tuesday");
+                break;
+            case 3:
+                document.write("<br>Today is Wednesday");
+                break;
+            case 4:
+                document.write("<br>Today is Thursday");
+                break;
+            case 5:
+                document.write("<br>Today is Friday");
+                break;
+            case 6:
+                document.write("<br>Today is Saturday");
+                break;
+        }
+        var nextDay = new Date(date);
+        nextDay.setDate(date.getDate() + 1);
+    </script>
+</body>
+</html>
