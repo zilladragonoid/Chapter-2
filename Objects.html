@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Making Objects</h1>
+    <p id="demo">
+        var employee
+    </p>
+    <script>
+        var employee = {
+            name: 'John Doe',
+            age: 30,
+            position: 'Software Engineer',
+            skills: ['JavaScript', 'Python', 'Java'],
+        }
+        document.getElementById("demo").innerHTML = 
+            'name:' + employee.name +
+            '<br>age:' + employee.age +
+            '<br>position:' + employee.position +
+            '<br>skills:' + employee.skills.join(', ');
+    </script>
+</body>
+</html>
