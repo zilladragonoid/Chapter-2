@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Object-Oriented Programming (OOP) in JavaScript
+    </h1>
+    <p id="student1"></p>
+    <p id="student2"></p>
+    <script>
+        class student{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            display(){
+                return `Name: ${this.name}, Age: ${this.age}`;
+            }
+        }
+        student1=new student("John", 13);
+        student1.display();
+        student2=new student("Jane", 14);
+        student2.display();
+        document.getElementById("student1").innerHTML = student1.display();
+        document.getElementById("student2").innerHTML = student2.display();
+    </script>
+</body>
+</html>
