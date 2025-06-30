@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Sorting Arrays in JavaScript
+    </h1>
+    <button onclick="sortArraya()">
+        Sort Array in Ascending order
+    </button>
+    <br><br>
+    <button onclick="sortArrayb()">
+        Sort Array in Descending order
+    </button>
+    <p id="numeric"></p>
+    <script>
+        var arr=[1, 3, 7, 10, 9, 5, 4, 2, 8, 6];
+        document.getElementById('numeric').innerHTML=arr;
+        function sortArraya() {
+            arr.sort(function(a, b) {
+                return a - b;
+            });
+            document.getElementById('numeric').innerHTML = arr;
+        }
+        function sortArrayb() {
+            arr.sort(function (a, b) {
+                return b - a;
+            });
+            document.getElementById('numeric').innerHTML = arr;}
+    </script>
+</body>
+</html>
