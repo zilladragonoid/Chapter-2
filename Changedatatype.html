@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Change Data Type in JavaScript
+    </h2>
+    <p>
+        In JavaScript, you can change the data type of a variable using various methods. Here are some common ways to do this:
+    </p>
+    <p id="oh"></p>
+    <p id="io"></p>
+    <script>
+        var one=30;
+        var two=20;
+        document.getElementById('oh').innerHTML=one+two;
+        document.getElementById('io').innerHTML=String(one)+String(two);
+        try {
+            one = String(one);
+            document.getElementById('oh').innerHTML = "Changed 'one' to string: " + one;
+        } catch (error) {
+            console.error("Error changing data type:", error);
+        }
+    </script>
+</body>
+</html>
